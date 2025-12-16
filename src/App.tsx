@@ -2,7 +2,7 @@ import { useState, lazy, Suspense } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-const ObjectiveSection = lazy(() => import("./components/ObjectiveSection"));
+const ObjectiveSection = lazy(() => import("./components/ResumeSection"));
 const SkillsSection = lazy(() => import("./components/SkillsSection"));
 const TabSection = lazy(() => import("./components/TabSection"));
 

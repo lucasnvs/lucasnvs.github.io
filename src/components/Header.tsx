@@ -6,7 +6,7 @@ interface HeaderProps {
 export default function Header({ setDark, dark }: HeaderProps) {
 
     const handleDownloadCV = () => {
-        alert("Funcionalidade de download do CV - adicione seu PDF em /public/cv.pdf");
+        alert("Ainda não adicionei meu CV aqui, mas em breve estará disponível! Por favor, entre em contato comigo pelo meu Email ou Linkedin que eu lhe envio :) \n\nEmail: lucaslimanvs@gmail.com \nLinkedin: https://linkedin.com/in/lucasnevs   ");
     };
 
     return (
@@ -18,14 +18,14 @@ export default function Header({ setDark, dark }: HeaderProps) {
                 <div>
                     <h1 className="text-2xl font-semibold">Lucas Neves</h1>
                     <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                        Desenvolvedor Full Stack • Porto Alegre
+                        Desenvolvedor de Software • Charqueadas, RS
                     </p>
                 </div>
             </div>
 
             <div className="flex flex-wrap items-center gap-3">
                 <a
-                    href="https://github.com/lucasneves"
+                    href="https://github.com/lucasnvs"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-4 py-2 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition border border-zinc-200 dark:border-zinc-700"
@@ -36,7 +36,7 @@ export default function Header({ setDark, dark }: HeaderProps) {
                     GitHub
                 </a>
                 <a
-                    href="https://linkedin.com/in/lucasneves"
+                    href="https://linkedin.com/in/lucasnevs"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-4 py-2 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition border border-zinc-200 dark:border-zinc-700"
@@ -47,7 +47,7 @@ export default function Header({ setDark, dark }: HeaderProps) {
                     LinkedIn
                 </a>
                 <a
-                    href="mailto:contato@lucasneves.com"
+                    href="mailto:lucaslimanvs@gmail.com"
                     className="flex items-center gap-2 text-sm font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-4 py-2 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition border border-zinc-200 dark:border-zinc-700"
                 >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
