@@ -1,9 +1,14 @@
 interface HeaderProps {
     setDark: React.Dispatch<React.SetStateAction<boolean>>;
     dark: boolean;
+    linkedinUrl: string;
+    githubUrl: string;
+    email: string;
 }
 
-export default function Header({ setDark, dark }: HeaderProps) {
+export default function Header(
+    { setDark, dark, linkedinUrl, githubUrl, email, }: HeaderProps
+) {
 
     const handleDownloadCV = () => {
         alert("Ainda não adicionei meu CV aqui, mas em breve estará disponível! Por favor, entre em contato comigo pelo meu Email ou Linkedin que eu lhe envio :) \n\nEmail: lucaslimanvs@gmail.com \nLinkedin: https://linkedin.com/in/lucasnevs   ");
@@ -25,7 +30,7 @@ export default function Header({ setDark, dark }: HeaderProps) {
 
             <div className="flex flex-wrap items-center gap-3">
                 <a
-                    href="https://github.com/lucasnvs"
+                    href={githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-4 py-2 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition border border-zinc-200 dark:border-zinc-700"
@@ -36,7 +41,7 @@ export default function Header({ setDark, dark }: HeaderProps) {
                     GitHub
                 </a>
                 <a
-                    href="https://linkedin.com/in/lucasnevs"
+                    href={linkedinUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-4 py-2 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition border border-zinc-200 dark:border-zinc-700"
@@ -47,7 +52,7 @@ export default function Header({ setDark, dark }: HeaderProps) {
                     LinkedIn
                 </a>
                 <a
-                    href="mailto:lucaslimanvs@gmail.com"
+                    href={`mailto:${email}`}
                     className="flex items-center gap-2 text-sm font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-4 py-2 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition border border-zinc-200 dark:border-zinc-700"
                 >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
