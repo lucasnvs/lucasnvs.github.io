@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { experiencesByLang } from "../data";
 import { useLanguage } from "../i18n";
+import React from "react";
 
 const parseBold = (text: string) => {
   const parts = text.split(/(\*\*.*?\*\*)/g);
@@ -14,7 +15,7 @@ const parseBold = (text: string) => {
 
 const formatText = (text: string) => {
   const lines = text.split('\n').filter(line => line.trim());
-  const result: JSX.Element[] = [];
+  const result: React.JSX.Element[] = [];
   let listItems: string[] = [];
   
   lines.forEach((line, index) => {
