@@ -9,16 +9,15 @@ interface HeaderProps {
 export default function Header(
     { setDark, dark, linkedinUrl, githubUrl, email, }: HeaderProps
 ) {
-
     const handleDownloadCV = () => {
-        alert("Ainda não adicionei meu CV aqui, mas em breve estará disponível! Por favor, entre em contato comigo pelo meu Email ou Linkedin que eu lhe envio :) \n\nEmail: lucaslimanvs@gmail.com \nLinkedin: https://linkedin.com/in/lucasnevs   ");
+        window.open('/cv-lucas-neves.pdf', '_blank');
     };
 
     return (
         <header className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center gap-4">
-                <div className="w-20 h-20 rounded-full bg-zinc-900 dark:bg-zinc-100 flex items-center justify-center text-xl font-semibold text-white dark:text-zinc-900">
-                    LN
+                <div className="w-24 h-24 rounded-full bg-zinc-900 dark:bg-zinc-100 flex items-center justify-center text-xl font-semibold text-white dark:text-zinc-900">
+                    <img src="/avatar.jpeg" alt="Lucas Neves" className="w-full h-full object-cover rounded-full" />
                 </div>
                 <div>
                     <h1 className="text-2xl font-semibold">Lucas Neves</h1>

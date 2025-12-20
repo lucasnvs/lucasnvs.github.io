@@ -1,6 +1,54 @@
 import { motion } from "framer-motion";
 import { experiences } from "../data";
 
+const parseBold = (text: string) => {
+  const parts = text.split(/(\*\*.*?\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={i} className="font-semibold">{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+};
+
+const formatText = (text: string) => {
+  const lines = text.split('\n').filter(line => line.trim());
+  const result: JSX.Element[] = [];
+  let listItems: string[] = [];
+  
+  lines.forEach((line, index) => {
+    const trimmed = line.trim();
+    
+    if (trimmed.startsWith('-')) {
+      listItems.push(trimmed.substring(1).trim());
+    } else {
+      if (listItems.length > 0) {
+        result.push(
+          <ul key={`list-${index}`} className="list-disc list-inside space-y-2 my-3 ml-2">
+            {listItems.map((item, i) => (
+              <li key={i} className="leading-relaxed">{parseBold(item)}</li>
+            ))}
+          </ul>
+        );
+        listItems = [];
+      }
+      result.push(<p key={`p-${index}`} className="mb-2">{parseBold(trimmed)}</p>);
+    }
+  });
+  
+  if (listItems.length > 0) {
+    result.push(
+      <ul key="list-final" className="list-disc list-inside space-y-2 my-3 ml-2">
+        {listItems.map((item, i) => (
+          <li key={i} className="leading-relaxed">{parseBold(item)}</li>
+        ))}
+      </ul>
+    );
+  }
+  
+  return result;
+};
+
 export default function ExperienceTab() {
   return (
     <motion.div
@@ -42,9 +90,9 @@ export default function ExperienceTab() {
                   </svg>
                   {exp.company}
                 </div>
-                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
-                  {exp.text}
-                </p>
+                <div className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+                  {formatText(exp.text)}
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {exp.skills.map((skill, idx) => (
                     <span key={idx} className="text-xs px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-md text-zinc-700 dark:text-zinc-300 font-medium">
