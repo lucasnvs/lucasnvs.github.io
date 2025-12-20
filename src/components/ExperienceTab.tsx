@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { experiences } from "../data";
+import { experiencesByLang } from "../data";
+import { useLanguage } from "../i18n";
 
 const parseBold = (text: string) => {
   const parts = text.split(/(\*\*.*?\*\*)/g);
@@ -50,6 +51,8 @@ const formatText = (text: string) => {
 };
 
 export default function ExperienceTab() {
+  const { lang } = useLanguage();
+  const experiences = experiencesByLang[lang];
   return (
     <motion.div
       key="experiencia"

@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { projects, type Project } from "../data";
+import { projectsByLang, type Project, uiText } from "../data";
+import { useLanguage } from "../i18n";
 
 const MediaPreview = ({ media }: { media: Project["media"] }) => {
   if (!media || media.length === 0) return null;
@@ -21,6 +22,9 @@ const MediaPreview = ({ media }: { media: Project["media"] }) => {
 };
 
 export default function ProjectsTab() {
+  const { lang } = useLanguage();
+  const projects = projectsByLang[lang];
+  const t = uiText[lang];
   const [selected, setSelected] = useState<Project | null>(null);
 
   const closeModal = () => setSelected(null);
@@ -123,7 +127,7 @@ export default function ProjectsTab() {
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg"
                   >
-                    Ver projeto
+                    {t.projects.cta}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 11h6m0 0v6m0-6l-7 7m-4-4l-2 2m0 0h4m-4 0v-4" />
                     </svg>

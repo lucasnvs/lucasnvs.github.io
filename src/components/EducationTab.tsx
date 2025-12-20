@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
-import { education } from "../data";
+import { educationByLang } from "../data";
+import { useLanguage } from "../i18n";
 
 export default function EducationTab() {
+  const { lang } = useLanguage();
+  const education = educationByLang[lang];
   return (
     <motion.div
       key="formacao"

@@ -1,3 +1,6 @@
+import { uiText } from "../data";
+import { useLanguage } from "../i18n";
+
 export default function Footer({
     linkedinUrl,
     githubUrl,
@@ -7,13 +10,15 @@ export default function Footer({
     githubUrl: string;
     email: string;
 }) {
+    const { lang } = useLanguage();
+    const t = uiText[lang];
     return (
         <footer className="max-w-5xl mx-auto mt-32 pt-12 border-t border-zinc-200 dark:border-zinc-800">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="text-center md:text-left">
                     <p className="text-sm font-medium mb-1">Lucas Neves</p>
                     <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                        Desenvolvedor de Software • Charqueadas, RS
+                        {t.footer.subtitle}
                     </p>
                 </div>
                 <div className="flex gap-6">
@@ -29,7 +34,7 @@ export default function Footer({
                 </div>
             </div>
             <div className="text-center mt-8 text-xs text-zinc-400 dark:text-zinc-500">
-                © {new Date().getFullYear()} Lucas Neves. Todos os direitos reservados.
+                © {new Date().getFullYear()} Lucas Neves. {t.footer.rights}
             </div>
         </footer>
     )

@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../i18n";
+import { uiText } from "../data";
 
 type TabType = "projetos" | "experiencia" | "formacao";
 
@@ -7,13 +9,15 @@ interface TabNavigationProps {
   onTabChange: (tab: TabType) => void;
 }
 
-const tabs = [
-  { id: "projetos" as const, label: "Projetos" },
-  { id: "experiencia" as const, label: "Experiência" },
-  { id: "formacao" as const, label: "Formação" },
-];
-
 export default function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
+  const { lang } = useLanguage();
+  const t = uiText[lang].tabs;
+  const tabs = [
+    { id: "projetos" as const, label: t.projects },
+    { id: "experiencia" as const, label: t.experience },
+    { id: "formacao" as const, label: t.education },
+  ];
+
   return (
     <div className="flex border-b border-zinc-200 dark:border-zinc-800 mb-8">
       {tabs.map((tab) => (

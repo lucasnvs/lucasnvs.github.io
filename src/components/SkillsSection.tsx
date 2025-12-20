@@ -1,10 +1,15 @@
 import { motion } from "framer-motion";
-import { skills } from "../data";
+import { skillsByLang, uiText } from "../data";
+import { useLanguage } from "../i18n";
 
 export default function SkillsSection() {
+  const { lang } = useLanguage();
+  const skills = skillsByLang[lang];
+  const t = uiText[lang];
+
   return (
     <section className="max-w-5xl mx-auto mt-12">
-      <h2 className="text-2xl font-semibold mb-6">Skills</h2>
+      <h2 className="text-2xl font-semibold mb-6">{t.skills.title}</h2>
       <div className="flex flex-wrap gap-3">
         {skills.map((skill, i) => (
           <motion.span
