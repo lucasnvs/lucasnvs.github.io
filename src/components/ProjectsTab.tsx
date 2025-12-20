@@ -38,7 +38,9 @@ export default function ProjectsTab() {
       transition={{ duration: 0.3 }}
     >
       <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
-        {projects.map((project, i) => (
+        {projects.map((project, i) => {
+          const bgImage = project.media?.[0]?.type === "image" ? project.media[0].src : null;
+          return (
           <motion.button
             key={i}
             type="button"
@@ -48,11 +50,18 @@ export default function ProjectsTab() {
             transition={{ delay: i * 0.1 }}
             className="group relative aspect-square overflow-hidden bg-zinc-100 dark:bg-zinc-900 cursor-pointer"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-zinc-200 to-zinc-300 dark:from-zinc-800 dark:to-zinc-900 flex items-center justify-center">
-              <svg className="w-16 h-16 text-zinc-400 dark:text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-              </svg>
-            </div>
+            {bgImage ? (
+              <div 
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${bgImage})` }}
+              />
+            ) : (
+              <div className="absolute inset-0 bg-gradient-to-br from-zinc-200 to-zinc-300 dark:from-zinc-800 dark:to-zinc-900 flex items-center justify-center">
+                <svg className="w-16 h-16 text-zinc-400 dark:text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+            )}
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-all duration-300 flex items-center justify-center p-4">
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
                 <h3 className="text-white font-semibold text-sm mb-2">{project.title}</h3>
@@ -69,7 +78,7 @@ export default function ProjectsTab() {
               </div>
             </div>
           </motion.button>
-        ))}
+        )})}
       </div>
 
       <AnimatePresence>
