@@ -345,12 +345,22 @@ export const skills = skillsByLang.pt;
 export const educationByLang: Record<Language, Education[]> = {
   pt: [
     {
+      year: "2026 - 2029",
+      degree: "Tecnólogo em Sistemas para Internet",
+      institution: "Instituto Federal Sul Rio-Grandense (IFSul) – Câmpus Charqueadas/RS",
+    },
+    {
       year: "2022 - 2025",
       degree: "Técnico em Informática integrado ao ensino médio",
       institution: "Instituto Federal Sul Rio-Grandense (IFSul) – Câmpus Charqueadas/RS",
     },
   ],
   en: [
+    {
+      year: "2026 - 2029",
+      degree: "Associate Degree in Internet Systems",
+      institution: "Instituto Federal Sul Rio-Grandense (IFSul) – Câmpus Charqueadas/RS",
+    },
     {
       year: "2022 - 2025",
       degree: "IT Technician (Integrated High School)",
