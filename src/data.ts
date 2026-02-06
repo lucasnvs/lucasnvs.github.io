@@ -65,7 +65,7 @@ export const uiText: Record<Language, UiText> = {
     header: {
       title: "Lucas Neves",
       subtitle: "Desenvolvedor de Software • Charqueadas, RS",
-      download: "Baixar CV",
+      download: "Visualizar CV",
     },
     footer: {
       subtitle: "Desenvolvedor de Software • Charqueadas, RS",
@@ -75,7 +75,7 @@ export const uiText: Record<Language, UiText> = {
       title: "Resumo",
       paragraphs: [
         "Sou desenvolvedor de software com experiência em desenvolvimento Full Stack, atuando principalmente com Python e Django, com experiência prática comprovada como bolsista, além do uso de tecnologias web modernas. Sou formado como Técnico em Informática pelo IFSul, onde adquiri sólida base em desenvolvimento front-end e back-end, banco de dados, redes, gerenciamento de sistemas e segurança da informação.",
-        "Possuo aproximadamente 3 anos de estudo e prática contínua em programação e desenvolvimento de software, com conhecimentos em React, Java, Kotlin, desenvolvimento Android, MySQL e Docker. Estou em processo de ingresso em um curso de graduação na área de tecnologia, buscando oportunidades para aplicar e expandir meus conhecimentos em novos projetos e desafios.",
+        "Possuo aproximadamente 3 anos de estudo e prática contínua em programação e desenvolvimento de software, com conhecimentos em Javascript, Typescript, React, PHP, Java, Kotlin, desenvolvimento Android, MySQL, PostgreSQL, Docker e CI/CD. Estou em processo de ingresso no curso Superior de Tecnologia em Sistemas para Internet (TSI), buscando oportunidades para aplicar e expandir meus conhecimentos em novos projetos e desafios.",
       ],
     },
     skills: { title: "Skills" },
@@ -86,7 +86,7 @@ export const uiText: Record<Language, UiText> = {
     header: {
       title: "Lucas Neves",
       subtitle: "Software Developer • Charqueadas, RS",
-      download: "Download CV",
+      download: "View CV",
     },
     footer: {
       subtitle: "Software Developer • Charqueadas, RS",
@@ -96,7 +96,7 @@ export const uiText: Record<Language, UiText> = {
       title: "Summary",
       paragraphs: [
         "I am a software developer with full-stack experience, mainly using Python and Django, plus modern web technologies. I graduated as an IT Technician at IFSul, where I built a solid foundation in front-end and back-end development, databases, networking, systems administration, and security.",
-        "I have around three years of continuous study and hands-on coding with React, Java, Kotlin, Android, MySQL, and Docker. I am pursuing a technology degree and looking for opportunities to apply and expand my skills in new projects and challenges.",
+        "I have around three years of continuous study and hands-on coding with Javascript, Typescript, React, PHP, Java, Kotlin, Android, MySQL, PostgreSQL, Docker, and CI/CD. I am pursuing a technology degree and looking for opportunities to apply and expand my skills in new projects and challenges.",
       ],
     },
     skills: { title: "Skills" },

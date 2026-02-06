@@ -20,7 +20,7 @@ export default function Header(
     };
 
     return (
-        <header className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <header className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center gap-4">
                 <div className="w-24 h-24 rounded-full bg-zinc-900 dark:bg-zinc-100 flex items-center justify-center text-xl font-semibold text-white dark:text-zinc-900">
                     LN

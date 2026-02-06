@@ -10,7 +10,7 @@ export default function TabSection() {
   const [activeTab, setActiveTab] = useState<TabType>("projetos");
 
   return (
-    <section className="max-w-5xl mx-auto mt-16">
+    <section className="max-w-6xl mx-auto mt-16">
       <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
       
       <div className="min-h-[400px]">

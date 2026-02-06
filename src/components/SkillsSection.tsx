@@ -8,7 +8,7 @@ export default function SkillsSection() {
   const t = uiText[lang];
 
   return (
-    <section className="max-w-5xl mx-auto mt-12">
+    <section className="max-w-6xl mx-auto mt-12">
       <h2 className="text-2xl font-semibold mb-6">{t.skills.title}</h2>
       <div className="flex flex-wrap gap-3">
         {skills.map((skill, i) => (

@@ -13,7 +13,7 @@ export default function Footer({
     const { lang } = useLanguage();
     const t = uiText[lang];
     return (
-        <footer className="max-w-5xl mx-auto mt-32 pt-12 border-t border-zinc-200 dark:border-zinc-800">
+        <footer className="max-w-6xl mx-auto mt-32 pt-12 border-t border-zinc-200 dark:border-zinc-800">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="text-center md:text-left">
                     <p className="text-sm font-medium mb-1">Lucas Neves</p>

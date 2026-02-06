@@ -27,7 +27,7 @@ export default function PortfolioLanding() {
             linkedinUrl={URLS.linkedinUrl}
             email={URLS.email}
           />
-          <Suspense fallback={<div className="max-w-5xl mx-auto mt-12 h-32 animate-pulse bg-zinc-100 dark:bg-zinc-900 rounded-lg" />}>
+          <Suspense fallback={<div className="max-w-6xl mx-auto mt-12 h-32 animate-pulse bg-zinc-100 dark:bg-zinc-900 rounded-lg" />}>
             <ObjectiveSection />
             <SkillsSection />
             <TabSection />
