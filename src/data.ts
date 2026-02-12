@@ -183,9 +183,21 @@ export const projectsByLang: Record<Language, Project[]> = {
       title: "Siboon Android",
       description: "Aplicativo de e-commerce para a loja 'Siboon Skateshop'.",
       tech: ["Java", "Android"],
-      link: "https://github.com/lucasnvs/siboon-android",
+      link: "https://github.com/lucasnvs/android-siboon",
       longDescription: "Aplicativo de e-commerce com catálogo de produtos, carrinho de compras e opcoes de perfil do usuario.",
       media: [],
+    },
+    {
+      title: "Historicando",
+      description: "Meu primeiro projeto em React. Blog que apresenta publicações autorais de conteúdos históricos. Desenvolvido como trabalho da disciplina de História.",
+      tech: ["Javascript", "React"],
+      link: "https://historicando.vercel.app",
+      longDescription: "Esse projeto foi um projeto simples de mais ou menos duas semanas do zero ao deploy, feito enquanto eu estudava desenvolvimento Front-End como um trabalho para uma aula de história do meu cólegio. No qual o objetivo era simular um 'site de história' onde autores/historiadores publicariam sobre os mais diversos acontecimentos históricos, em formato de post/blog, neste caso como se tratava de um trabalho de Revolução Francesa, o único tema disponível foi o da mesma.",
+      media: [
+        { type: "image", src: "/projects/historicando/historicando.png", alt: "Visão geral da Landing Page" },
+        { type: "video", src: "/projects/historicando/historicando-1.mp4", alt: "Visão geral do Site" },
+        { type: "video", src: "/projects/historicando/historicando-2.webm", alt: "Visão geral do Site" },
+      ],
     },
   ],
   en: [
