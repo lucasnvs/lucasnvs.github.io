@@ -22,10 +22,6 @@ export default function Header(
     return (
         <header className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center gap-4">
-                <div className="w-24 h-24 rounded-full bg-zinc-900 dark:bg-zinc-100 flex items-center justify-center text-xl font-semibold text-white dark:text-zinc-900">
-                    LN
-                    {/* <img src="/avatar.jpeg" alt="Lucas Neves" className="w-full h-full object-cover rounded-full" /> */}
-                </div>
                 <div>
                     <h1 className="text-2xl font-semibold">{t.header.title}</h1>
                     <p className="text-sm text-zinc-500 dark:text-zinc-400">
@@ -75,13 +71,13 @@ export default function Header(
                     </svg>
                     {t.header.download}
                 </button>
-                <button
+                {/* <button
                     onClick={toggleLang}
                     className="flex items-center gap-1 text-sm font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-3 py-2 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition border border-zinc-200 dark:border-zinc-700"
                     aria-label="Toggle language"
                 >
                     {lang === 'pt' ? 'EN' : 'PT'}
-                </button>
+                </button> */}
                 <button
                     onClick={() => setDark(!dark)}
                     className="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center hover:bg-zinc-200 dark:hover:bg-zinc-700 transition border border-zinc-200 dark:border-zinc-700"

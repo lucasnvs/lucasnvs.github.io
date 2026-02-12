@@ -144,6 +144,16 @@ export const projectsByLang: Record<Language, Project[]> = {
       ],
     },
     {
+      title: "Invite Quiz App - INF4AT",
+      description: "Aplicativo Android de Quiz, desenvolvido em Kotlin.",
+      tech: ["Kotlin", "Android"],
+      link: "https://github.com/lucasnvs/invite-quiz-app-inf4at",
+      longDescription: "Aplicativo Android desenvolvido em Kotlin. Foi desenvolvido um quiz como uma brincadeira para convidar um professor de PDM (Programação de Dispositivos Móveis) a ser paraninfo da turma na formatura.",
+      media: [
+        { type: "image", src: "/projects/quizapp/quizappinf4at.gif", alt: "Visão geral do APP" },
+      ],
+    },
+    {
       title: "Siboon E-commerce",
       description: "Sistema de e-commerce para a loja 'Siboon Skateshop'.",
       tech: ["PHP", "Web", "MySQL"],
