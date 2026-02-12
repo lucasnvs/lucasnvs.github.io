@@ -20,7 +20,7 @@ export default function Header(
     };
 
     return (
-        <header className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <header className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center gap-4">
                 <div>
                     <h1 className="text-2xl font-semibold">{t.header.title}</h1>
