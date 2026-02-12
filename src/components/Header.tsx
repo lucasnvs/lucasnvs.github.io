@@ -12,7 +12,8 @@ interface HeaderProps {
 export default function Header(
     { setDark, dark, linkedinUrl, githubUrl, email, }: HeaderProps
 ) {
-    const { lang, toggleLang } = useLanguage();
+    // const { lang, toggleLang } = useLanguage();
+    const { lang } = useLanguage();
     const t = uiText[lang];
 
     const handleDownloadCV = () => {
